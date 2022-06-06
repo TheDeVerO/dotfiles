@@ -20,7 +20,10 @@ Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/tc50cal/vim-terminal'
 Plug 'https://github.com/terryma/vim-multiple-cursors'
 Plug 'https://github.com/preservim/tagbar' 
+Plug 'https://github.com/vim-syntastic/syntastic'
+Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/neoclide/coc.nvim'
+
 
 call plug#end()
 
@@ -31,7 +34,18 @@ set termguicolors
 colorscheme lucid
 
 
-:set completeopt-=preview
+" Auto-closing tags, vanilla vim =====================
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" ====================================================
+
 
 nmap <F8> :TagbarToggle<CR>
 
