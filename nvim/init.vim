@@ -24,6 +24,9 @@ Plug 'https://github.com/vim-syntastic/syntastic'
 Plug 'https://github.com/dense-analysis/ale'
 Plug 'https://github.com/neoclide/coc.nvim'
 
+" Prettier ===========================================
+
+Plug 'prettier/vim-prettier'   
 
 call plug#end()
 
@@ -52,3 +55,4 @@ nmap <F8> :TagbarToggle<CR>
 
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-p> :Prettier<CR>
